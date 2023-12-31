@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        main{
+            background-color: orange;
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 350px;
+            height: 300px;
+        }
+        header{
+           width: 320px;
+           border:  1px solid black;
+           margin: 10px ;
+        }
+        section{
+            border: 1px solid black;
+            width: 300px;
+            margin: 20px 20px;
+        }
+        #entrada{
+            padding-left: 15px;
+        }
+        input{
+            width: 70px;
+        }
+    </style>
+    <title>operações rapidas</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h3>Operações Rapidas</h3>
+        </header>
+        <section id="part_1">
+          <p id="entrada">
+            <label for="num1">Nome</label>
+            <input type="number" name="nome" id="num1" oninput="mostrar()">
+            <label for="num2">+</label>
+            <input type="number" name="num2" id="num2" oninput="mostrar()">
+          </p>
+          <p id="saida"></p>
+        </section>
+    </main>
+    <script>
+        let num1 = document.getElementById('num1')
+        let num2 = document.getElementById('num2')
+        let resp = document.getElementById('saida')
+        
+        function mostrar(){
+            resp.innerText=""
+            let n1 = Number(num1.value)
+            let n2 = Number(num2.value)
+            return  resp.innerHTML +=`${n1} + ${n2} =${n1+n2}<br>${n1} - ${n2} =${n1-n2}<br> ${n1} x ${n2} = ${n1*n2}<br>${n1} / ${n2} = ${n1/n2}`
+        }
+
+    </script>
+</body>
+</html>
